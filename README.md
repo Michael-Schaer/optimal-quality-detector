@@ -18,7 +18,7 @@ All the QualityLevels that are not available on the current platform will be ign
 The Benchmark Scene represents an average scene of your game. If you want the test to be very precise, you should completely copy one of your levels and possibly use the same behaviours as you use in your scenes.<br/><br/>
 
 If you just need approximate results, you can always use the included scene and tweak it to fit your needs. The current scene is aligned for a mobile 3D project, but you can easily raise the bar. There are lots of variables to adjust in the scene, most importantly the two PrefabGenerators, which clone different scene objects:<br/><br/>
-The first PrefabGenerator clones a NavMeshAgent, which is a very CPU-intensive Object. The second PrefabGenerator clones a model, which only has to be rendered by the GPU (more or less). So if your game is very CPU-intensive you want to clone a high amount of NavMeshAgents. If your game has lots of models to render, you want to increase the amount on the second PrefabGenerator.
+The first PrefabGenerator clones a NavMeshAgent, which is a very CPU-intensive object. The second PrefabGenerator clones just a model without logic. Raising the number of those models will increase the GPU load alot while not affecting the CPU load much.
 ![BenchmarkSceneImportantSettings](/HowToImages/BenchmarkSetup.PNG?raw=true) <br/>
 The scene can also be adjusted to use elements like: 
 - baked and realtime lights
