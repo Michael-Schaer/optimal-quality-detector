@@ -15,7 +15,7 @@ public class LowQualityTerrainSettings : MonoBehaviour
     {
         if (QualitySettings.GetQualityLevel() <= highestLowQualityLevel)
         {
-            DoqLogger.Instance.Log("Terrain Quality lowered");
+            QLDLogger.Instance.Log("Terrain Quality lowered");
             mainTerrain.treeDistance = maxTreeDistance;
 			mainTerrain.heightmapPixelError = heightmapPixelError;
 			mainTerrain.detailObjectDistance = detailObjectDistance;

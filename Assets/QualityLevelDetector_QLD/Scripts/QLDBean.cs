@@ -3,7 +3,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 
-public class QualityLevelBean : IComparable<QualityLevelBean>
+public class QLDBean : IComparable<QLDBean>
 {
 	public string qualityLevelName;
     public int sortingValue;
@@ -12,7 +12,7 @@ public class QualityLevelBean : IComparable<QualityLevelBean>
 
     public float averageFPS = 0;
 
-    public QualityLevelBean(string qualityLevelName, int originalIndex, int sortingValue, int fpsRequirement)
+    public QLDBean(string qualityLevelName, int originalIndex, int sortingValue, int fpsRequirement)
     {
         this.qualityLevelName = qualityLevelName;
         this.originalIndex = originalIndex;
@@ -20,13 +20,13 @@ public class QualityLevelBean : IComparable<QualityLevelBean>
         this.fpsRequirement = fpsRequirement;
     }
 
-    public static List<QualityLevelBean> GetSortedList(List<QualityLevelBean> unsorted)
+    public static List<QLDBean> GetSortedList(List<QLDBean> unsorted)
     {
         unsorted.Sort();
         return unsorted;
     }
 
-    public int CompareTo(QualityLevelBean other)
+    public int CompareTo(QLDBean other)
     {
         if (sortingValue == other.sortingValue)
         {

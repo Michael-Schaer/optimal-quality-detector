@@ -32,9 +32,9 @@ public class BenchmarkController : MonoBehaviour
 
     private void StoreTestResults()
     {
-        if (DoqController.HasInstance())
+        if (QLDController.HasInstance())
         {
-            DoqController.Instance.StoreResult(fpsCounter.averageFps);
+            QLDController.Instance.StoreResult(fpsCounter.averageFps);
         }
     }
 }

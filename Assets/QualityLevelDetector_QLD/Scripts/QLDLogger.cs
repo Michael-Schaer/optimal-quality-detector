@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class DoqLogger : Singleton<DoqLogger>
+public class QLDLogger : Singleton<QLDLogger>
 {
     public bool debug = true;
     public bool errors = true;
