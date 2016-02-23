@@ -7,8 +7,8 @@ public class PrefabGenerator : MonoBehaviour {
     public GameObject prefab;
     public int numberOfPrefabs = 10;
     public bool shiftObjects = false;
-    public float shiftDistance = 3;
-    public int prefabsPerRow = 10;
+    public int shiftDistance = 1;
+    public int prefabsPerRow = 5;
 
     private int prefabCounter = 1;
     private Vector3 currentShift;

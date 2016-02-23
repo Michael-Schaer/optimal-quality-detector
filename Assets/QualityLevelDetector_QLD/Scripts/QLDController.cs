@@ -29,6 +29,12 @@ public class QLDController : Singleton<QLDController>
 
     void Start ()
     {
+        if (levelGradingFPS.Length != definedQualityLevels.Length)
+        {
+            QLDLogger.Instance.LogError("Quality Levels and Level Grading FPS must have the same amount of elements! (Check your BenchmarkController values)");
+            return;
+        }
+
         if (PlayerPrefs.GetInt(BENCHMARK_DONE, 0) == 1)
         {
             if (QLDLogger.Instance.resetPrefs)
@@ -43,13 +49,8 @@ public class QLDController : Singleton<QLDController>
 
     public void StartQualityTest()
     {
+        QLD_UI.Instance.ShowLoadingScreen();
         DontDestroyOnLoad(this);
-
-        if (levelGradingFPS.Length != definedQualityLevels.Length)
-        {
-            QLDLogger.Instance.LogError("Quality Levels and Level Grading FPS must have the same amount of elements! (Check your BenchmarkController values)");
-            return;
-        }
 
         SortQualityLevels();
         //SetBenchmark();
