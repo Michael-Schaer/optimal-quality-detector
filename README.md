@@ -1,8 +1,6 @@
 # QualityLevelDetector (QLD)
 <b>QLD</b> is a nice addition for your Unity3D project. It determines the optimal quality level to use on the current device by measuring framerates on a test scenario.
 
-The code in this repository is licensed under the LGPL. I have plans to offer the package also on the Unity Asset Store for some dollars. Check this page for updates if you are interested in aquiring the package without a copyleft license.
-
 ###How does QLD work?###
 There is a sample scene included, which will be used as a reference for your game. <b>QLD</b> runs the sample scene for each QualityLevel and records the frame rates. Starting with the lowest QualityLevel, the program will go through the different settings (ascending). As soon as the framerate gets low, the test is stopped. The last QualityLevel with a good framerate will be chosen as the optimal setting (framerate requirements can be configured).<br/><br/>
 OQD runs out of the box! Simply load this asset to a new project, open up the menu scene and execute the application.
